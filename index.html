@@ -45,7 +45,7 @@
                     $scope.time = new Date($scope.$storage.time);
                     $scope.postsName = [];
                     hashPosts = [];
-                    getAllGroups('https://crossorigin.me/https://graph.facebook.com/v2.3/10204163769794306/groups?&access_token=' + $scope.$storage.key);
+                    getAllGroups('http://anyorigin.com/go?url=/https://graph.facebook.com/v2.3/10204163769794306/groups?&access_token=' + $scope.$storage.key);
                 };
 
                 if (!$scope.$storage.spamers) {$scope.$storage.spamers =[]
@@ -102,7 +102,7 @@
                 var groups = [];
 
                 function getAllGroups(url) {
-                    $http.get('https://crossorigin.me/' + url).
+                    $http.get('http://anyorigin.com/go?url=' + url).
                     success(function(data, status, headers, config) {
                         $scope.$storage.time = new Date();
                         data.data.forEach(function (group) {
